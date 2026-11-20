@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'latihan61_provider/daftar_karyawan_page.dart';
+import 'latihan62_riverpod/penggajian_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,6 +20,11 @@ class HomePage extends StatelessWidget {
             leading: const Icon(Icons.beach_access),
             title: const Text('Latihan 6.1 — Cuti (Provider)'),
             onTap: () => _buka(context, const DaftarKaryawanPage()),
+          ),
+          ListTile(
+            leading: const Icon(Icons.payments),
+            title: const Text('Latihan 6.2 — Penggajian (Riverpod)'),
+            onTap: () => _buka(context, const PenggajianPage()),
           ),
         ],
       ),

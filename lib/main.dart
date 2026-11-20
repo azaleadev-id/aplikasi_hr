@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart' show ProviderScope;
 import 'package:provider/provider.dart';
 
 import 'home_page.dart';
@@ -6,9 +7,12 @@ import 'latihan61_provider/cuti_notifier.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => CutiNotifier(),
-      child: const AplikasiHR(),
+    ProviderScope(
+      retry: (retryCount, error) => null,
+      child: ChangeNotifierProvider(
+        create: (_) => CutiNotifier(),
+        child: const AplikasiHR(),
+      ),
     ),
   );
 }
